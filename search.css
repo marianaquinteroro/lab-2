@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input {
+    padding: 8px 12px;
+    border:  1px solid #333c4d;
+    background-color: 	#05070a;
+    border-radius: 8px;
+}
+
+input::placeholder {
+    font-family: Inter, sans-serif;
+    color: #333c4d;
+
+}
+
+button {
+    cursor: pointer;
+    background-color: #05070a;
+    color: #333c4d;
+    border: 1px solid #333c4d;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
