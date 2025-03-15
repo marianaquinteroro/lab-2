@@ -35,13 +35,20 @@ class App extends HTMLElement {
             font-size : 36px;
             margin 32px 0 13px;
             }
-            #news-container{
+            #news-container {
             gap : 64px;
             }
+
+         @media screen and (max-width: 768px) {
+    #cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
             </style>
             <main>
             <my-header></my-header>
-            <section>
+            <section id="cards-container">
           ${data.map(({
                 img,
                 category,
