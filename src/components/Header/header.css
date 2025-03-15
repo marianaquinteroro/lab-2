@@ -27,7 +27,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    gap: 24px;
+    gap: 20px;
 }
 
 ul li {
@@ -41,4 +41,18 @@ ul li {
 }
 ul li.active {
     border: 1px solid #333c4d;
+}
+
+
+@media screen and (max-width : 768px){
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
 }

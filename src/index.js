@@ -40,7 +40,7 @@ class App extends HTMLElement {
             }
 
          @media screen and (max-width: 768px) {
-    #cards-container {
+    section {
         grid-template-columns: 1fr;
     }
 }
@@ -48,7 +48,7 @@ class App extends HTMLElement {
             </style>
             <main>
             <my-header></my-header>
-            <section id="cards-container">
+            <section>
           ${data.map(({
                 img,
                 category,
