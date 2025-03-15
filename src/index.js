@@ -2,6 +2,10 @@ import "./components/Header/Header.js";
 import "./components/Card/Card.js";
 import "./components/News/News.js"
 import "./components/Dial/Dial.js"
+import { data } from "./data/data.js";
+
+console.log(data);
+
 
 class App extends HTMLElement {
     constructor() {
@@ -29,19 +33,30 @@ class App extends HTMLElement {
                 }
             #latest {
             font-size : 36px;
-            margin 32px 0 16px;
+            margin 32px 0 13px;
+            }
+            #news-container{
+            gap : 64px;
             }
             </style>
             <main>
             <my-header></my-header>
             <section>
-            <my-card></my-card>
-            <my-card></my-card>
+          ${data.map(({ img, category, title, desc, userImg, userName, date }) => {
+                return (
+                    `<my-card img="${img}" category="${category}" title="${title}" desc="${desc}" userImg="${userImg}" userName="${userName}" date="${date}"></my-card>`
+                )
+            }).join('')
+                }
             </section>
             <h2 id="latest">Latest</h2>
-            <section>
-            <my-news></my-news>
-            <my-news></my-news>
+            <section id="news-container">
+            ${data.map(({ category, title, desc, userImg, userName, date }) => {
+                return (
+                    `<my-news category="${category}" title="${title}" desc="${desc}" userImg="${userImg}" userName="${userName}" date="${date}"></my-news>`
+                )
+            }).join('')
+                }
             </section>
             <my-dial></my-dial>
             </main>
