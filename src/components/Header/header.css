@@ -35,8 +35,10 @@ ul li {
     font-size: 12px;
     font-weight: 600;
     padding: 8px 12px;
-    border: 1px solid #333c4d;
     background-color: #0b0e14;
     border-radius: 50px;
     cursor: pointer;
+}
+ul li.active {
+    border: 1px solid #333c4d;
 }

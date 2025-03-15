@@ -16,7 +16,7 @@ export class Header extends HTMLElement {
             <p> Stay in the loop with the latest about our products </p>
             <nav> 
                 <ul>
-                    <li>
+                    <li class="active">
                     All categories
                     </li>
                     <li>
