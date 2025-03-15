@@ -42,20 +42,49 @@ class App extends HTMLElement {
             <main>
             <my-header></my-header>
             <section>
-          ${data.map(({ img, category, title, desc, userImg, userName, date }) => {
+          ${data.map(({
+                img,
+                category,
+                title,
+                desc,
+                userImg,
+                userName,
+                date }) => {
                 return (
-                    `<my-card img="${img}" category="${category}" title="${title}" desc="${desc}" userImg="${userImg}" userName="${userName}" date="${date}"></my-card>`
+                    `
+                    <my-card 
+                    img="${img}"
+                    category="${category}" 
+                    title="${title}" desc="${desc}" 
+                    userImg="${userImg}" 
+                    userName="${userName}" 
+                    date="${date}">
+                    </my-card>`
                 )
             }).join('')
                 }
             </section>
             <h2 id="latest">Latest</h2>
             <section id="news-container">
-            ${data.map(({ category, title, desc, userImg, userName, date }) => {
-                return (
-                    `<my-news category="${category}" title="${title}" desc="${desc}" userImg="${userImg}" userName="${userName}" date="${date}"></my-news>`
-                )
-            }).join('')
+            ${data.map(({
+                    category,
+                    title,
+                    desc,
+                    userImg,
+                    userName,
+                    date }) => {
+                    return (
+                        `
+                        <my-news 
+                        category="${category}" 
+                        title="${title}"
+                         desc="${desc}" 
+                        userImg="${userImg}" 
+                        userName="${userName}"
+                         date="${date}">
+                         </my-news>`
+                    )
+                }).join('')
                 }
             </section>
             <my-dial></my-dial>
